@@ -2,6 +2,7 @@ package net.gabon_guy.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.gabon_guy.tutorialmod.block.ModBlocks;
 import net.gabon_guy.tutorialmod.item.ModItemGroups;
 import net.gabon_guy.tutorialmod.item.ModItems;
@@ -17,5 +18,7 @@ public class TutorialMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 		ModItemGroups.registerItemGroups();
+
+		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 	}
 }
