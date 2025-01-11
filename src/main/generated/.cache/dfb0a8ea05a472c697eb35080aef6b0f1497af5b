@@ -1,8 +1,8 @@
-// 1.21	2024-12-24T12:53:37.5785524	Tutorial Mod/Recipes
+// 1.21	2024-12-25T09:31:02.8619047	Tutorial Mod/Recipes
 485dc99f687198b7e162d0fceebf118c2664eae2 data\tutorialmod\advancement\recipes\misc\pink_garnet_from_smelting_pink_garnet_ore.json
 19829bd54ce48362e6e9addaa1bfb8c9df275f52 data\tutorialmod\advancement\recipes\misc\raw_pink_garnet.json
-3cdd9ab3d752fb4254820ee52b376aff99301195 data\tutorialmod\recipe\pink_garnet_from_blasting_pink_garnet_deepslate_ore.json
 da415f625ebc9331383714ee60ff41204e6976b2 data\tutorialmod\advancement\recipes\misc\pink_garnet_from_blasting_pink_garnet_deepslate_ore.json
+3cdd9ab3d752fb4254820ee52b376aff99301195 data\tutorialmod\recipe\pink_garnet_from_blasting_pink_garnet_deepslate_ore.json
 338342fb055ede1ef2b72128e8b780496fc53abd data\tutorialmod\advancement\recipes\misc\raw_pink_garnet_block.json
 20ff29d6747251dc88039514f13ddbba87406ae1 data\tutorialmod\recipe\raw_pink_garnet_block.json
 ecdcb274ed5fc6a35043cbcadb4d882817bcc71f data\tutorialmod\advancement\recipes\building_blocks\pink_garnet.json

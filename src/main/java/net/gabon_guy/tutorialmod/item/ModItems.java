@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.gabon_guy.tutorialmod.TutorialMod;
 import net.gabon_guy.tutorialmod.item.custom.ChiselItem;
 import net.gabon_guy.tutorialmod.item.custom.HammerItem;
+import net.gabon_guy.tutorialmod.item.custom.ModArmorItem;
 import net.minecraft.item.*;
 import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
@@ -17,15 +18,14 @@ public class ModItems {
     public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(new Item.Settings()));
     public static final Item RAW_PINK_GARNET = registerItem("raw_pink_garnet", new Item(new Item.Settings()));
 
+    public static final Item CHISEL = registerItem("chisel", new ChiselItem(new Item.Settings().maxDamage(32)));
     public static final Item CAULIFLOWER = registerItem("cauliflower", new Item(new Item.Settings().food(ModFoodComponents.CAULIFLOWER)) {
         @Override
         public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
             tooltip.add(Text.translatable("tooltip.tutorialmod.cauliflower.tooltip"));
-
             super.appendTooltip(stack, context, tooltip, type);
         }
     });
-    public static final Item CHISEL = registerItem("chisel", new ChiselItem(new Item.Settings().maxDamage(32)));
 
     public static final Item STARLIGHT_ASHES = registerItem("starlight_ashes", new Item(new Item.Settings()));
 
@@ -37,7 +37,7 @@ public class ModItems {
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 1, -2.8f))));
     public static final Item PINK_GARNET_SHOVEL = registerItem("pink_garnet_shovel",
             new ShovelItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
-                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET,1.5f, -3.0f))));
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 1.5f, -3.0f))));
     public static final Item PINK_GARNET_AXE = registerItem("pink_garnet_axe",
             new AxeItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
                     .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 6, -3.2f))));
@@ -47,10 +47,10 @@ public class ModItems {
 
     public static final Item PINK_GARNET_HAMMER = registerItem("pink_garnet_hammer",
             new HammerItem(ModToolMaterials.PINK_GARNET, new Item.Settings()
-                    .attributeModifiers(HammerItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 7, -3.4f))));
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 7, -3.4f))));
 
     public static final Item PINK_GARNET_HELMET = registerItem("pink_garnet_helmet",
-            new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+            new ModArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
                     .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15))));
     public static final Item PINK_GARNET_CHESTPLATE = registerItem("pink_garnet_chestplate",
             new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
